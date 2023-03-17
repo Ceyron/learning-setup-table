@@ -38,6 +38,9 @@ MathJax = {
   <li class="list-group-item">
     Loss $l(\hat{u}, u)$
   </li>
+  <li class="list-group-item">
+    NN main chain $\left \{ u^{[s]} \right \}_{s=0}^t=\left \{ f^s(u^{[0]}, \theta) \right \}_{s=0}^t$
+  </li>
 </ul>
 <p class="text-center small">
   
@@ -58,7 +61,7 @@ MathJax = {
   </tr>
   <tr>
     <!-- One-Step Supervised -->
-    <td>One-Step supervised</td>
+    <td>One-Step Supervised</td>
     <td>$
       l \left(
         f(u^{[0]}),
@@ -66,12 +69,36 @@ MathJax = {
       \right)
     $</td>
     <td>$
-      \frac{\partial l}{\partial \hat{u}}\big|_{f(u^{[0]})}
+      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[1]}}
       \frac{\partial f}{\partial u}\big|_{u^{[0]}}
     $</td>
     <td>$
-      \frac{\partial l}{\partial \hat{u}}\big|_{f(u^{[0]})}
+      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[1]}}
       \frac{\partial f}{\partial \theta}\big|_{u^{[0]}}
+    $</td>
+  </tr>
+  <tr>
+    <!-- Two-Step Supervised Final -->
+    <td>Two-Step Supervised Final</td>
+    <td>$
+      l \left(
+        f^2(u^{[0]}),
+        \mathcal{P}^2(u^{[0]})
+      \right)
+    $</td>
+    <td>$
+      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[2]}}
+      \frac{\partial f}{\partial u}\big|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\big|_{u^{[0]}}
+    $</td>
+    <td>$
+      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[2]}}
+      \left(
+        \frac{\partial f}{\partial \theta}\big|_{u^{[1]}}
+        +
+        \frac{\partial f}{\partial u}\big|_{u^{[1]}}
+        \frac{\partial f}{\partial \theta}\big|_{u^{[0]}}
+      \right)
     $</td>
   </tr>
   </tbody>
