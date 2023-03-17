@@ -186,6 +186,31 @@ MathJax = {
       \frac{\partial f}{\partial \theta}\bigg|_{u^{[r]}}
     $$</td>
   </tr>
+  <tr>
+    <td><b>Supervised - <a href="https://arxiv.org/abs/2202.03376">Pushforward Trick </a> </b></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <!-- Two-Step first frozen-->
+    <td class="align-middle">Two-Step First Frozen</td>
+    <td>$$
+      l \left(
+        f(\tilde{f}(u^{[0]})),
+        \mathcal{P}^2(u^{[0]})
+      \right)
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[1]}}
+    $$</td>
+  </tr>
   </tbody>
 </table> 
 
