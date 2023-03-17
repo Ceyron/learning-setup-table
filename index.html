@@ -348,6 +348,66 @@ MathJax = {
     <td></td>
     <td></td>
   </tr>
+  <tr>
+    <!-- Zero Main chain - One Diversion Chain-->
+    <td class="align-middle">Zero Main chain - One Diversion Chain</td>
+    <td>$$
+      l \left(
+        f(u^{[0]}),
+        \mathcal{P}(u^{[0]})
+      \right)
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
+    $$</td>
+  </tr>
+  <tr>
+    <!-- One Main chain - One Diversion chain -->
+    <td class="align-middle">One Main chain - One Diversion chain</td>
+    <td>$$
+      l \left(
+        f(u^{[0]}),
+        \mathcal{P}(u^{[0]})
+      \right)
+      +
+      l \left(
+        f^2(u^{[0]}),
+        \mathcal{P}(f(u^{[0]}))
+      \right)
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+      +
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+      +
+      \frac{\partial l}{\partial u}\bigg|_{\mathcal{P}(u^{[1]})}
+      \frac{\partial \mathcal{P}}{\partial u}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
+      +
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[1]}}
+      +
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
+      +
+      \frac{\partial l}{\partial u}\bigg|_{\mathcal{P}(u^{[1]})}
+      \frac{\partial \mathcal{P}}{\partial \theta}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
+    $$</td>
+  </tr>
   </tbody>
 </table> 
 
