@@ -43,13 +43,13 @@ MathJax = {
   </li>
 </ul>
 
-<table class="table table-striped table-hover table-bordered">
+<table class="table table-striped table-hover table-bordered align-middle text-center">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Loss - $J(\theta, u^{[0]})$</th>
-      <th>IC-Jacobian - $\frac{\partial J}{\partial u^{[0]}}$</th>
-      <th>Parameter Jacobian - $\frac{\partial J}{\partial \theta}$</th>
+      <th class="align-middle">Method</th>
+      <th class="align-middle">Loss - $J(\theta, u^{[0]})$</th>
+      <th class="align-middle">IC-Jacobian - $\frac{\partial J}{\partial u^{[0]}}$</th>
+      <th class="align-middle">Parameter Jacobian - $\frac{\partial J}{\partial \theta}$</th>
     </tr>
   <tbody>
   <tr>
@@ -60,50 +60,50 @@ MathJax = {
   </tr>
   <tr>
     <!-- One-Step Supervised -->
-    <td>One-Step Supervised</td>
-    <td>$
+    <td class="align-middle">One-Step Supervised</td>
+    <td>$$
       l \left(
         f(u^{[0]}),
         \mathcal{P}(u^{[0]})
       \right)
-    $</td>
-    <td>$
-      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[1]}}
-      \frac{\partial f}{\partial u}\big|_{u^{[0]}}
-    $</td>
-    <td>$
-      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[1]}}
-      \frac{\partial f}{\partial \theta}\big|_{u^{[0]}}
-    $</td>
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
+    $$</td>
   </tr>
   <tr>
     <!-- Two-Step Supervised Final -->
-    <td>Two-Step Supervised Final</td>
-    <td>$
+    <td class="align-middle">Two-Step Supervised Final</td>
+    <td>$$
       l \left(
         f^2(u^{[0]}),
         \mathcal{P}^2(u^{[0]})
       \right)
-    $</td>
-    <td>$
-      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[2]}}
-      \frac{\partial f}{\partial u}\big|_{u^{[1]}}
-      \frac{\partial f}{\partial u}\big|_{u^{[0]}}
-    $</td>
-    <td>$
-      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[2]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
       \left(
-        \frac{\partial f}{\partial \theta}\big|_{u^{[1]}}
+        \frac{\partial f}{\partial \theta}\bigg|_{u^{[1]}}
         +
-        \frac{\partial f}{\partial u}\big|_{u^{[1]}}
-        \frac{\partial f}{\partial \theta}\big|_{u^{[0]}}
+        \frac{\partial f}{\partial u}\bigg|_{u^{[1]}}
+        \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
       \right)
-    $</td>
+    $$</td>
   </tr>
   <tr>
     <!-- Two-Step Supervised Trajectory -->
-    <td>Two-Step Supervised Trajectory</td>
-    <td>$
+    <td class="align-middle">Two-Step Supervised Trajectory</td>
+    <td>$$
       l \left(
         f(u^{[0]}),
         \mathcal{P}(u^{[0]})
@@ -113,27 +113,51 @@ MathJax = {
         f^2(u^{[0]}),
         \mathcal{P}^2(u^{[0]})
       \right)
-    $</td>
-    <td>$
-      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[1]}}
-      \frac{\partial f}{\partial u}\big|_{u^{[0]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
       +
-      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[2]}}
-      \frac{\partial f}{\partial u}\big|_{u^{[1]}}
-      \frac{\partial f}{\partial u}\big|_{u^{[0]}}
-    $</td>
-    <td>$
-      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[1]}}
-      \frac{\partial f}{\partial \theta}\big|_{u^{[0]}}
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
       +
-      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[2]}}
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
       \left(
-        \frac{\partial f}{\partial \theta}\big|_{u^{[1]}}
+        \frac{\partial f}{\partial \theta}\bigg|_{u^{[1]}}
         +
-        \frac{\partial f}{\partial u}\big|_{u^{[1]}}
-        \frac{\partial f}{\partial \theta}\big|_{u^{[0]}}
+        \frac{\partial f}{\partial u}\bigg|_{u^{[1]}}
+        \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
       \right)
-    $</td>
+    $$</td>
+  </tr>
+  <tr>
+    <!-- Multi-Step Supervised Final -->
+    <td class="align-middle">Multi-Step Supervised Final</td>
+    <td>$$
+      l \left(
+        f^t(u^{[0]}),
+        \mathcal{P}^t(u^{[0]})
+      \right)
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[t]}}
+      \prod_{p=t-1}^0
+      \frac{\partial f}{\partial u}\bigg|_{u^{[p]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[t]}}
+      \sum_{s=t-1}^1
+      \left(
+        \prod_{p=t-1}^s
+        \frac{\partial f}{\partial u}\bigg|_{u^{[p]}}
+      \right)
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[s]}}
+    $$</td>
   </tr>
   </tbody>
 </table> 
