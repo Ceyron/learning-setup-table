@@ -103,6 +103,41 @@ MathJax = {
       \right)
     $</td>
   </tr>
+  <tr>
+    <!-- Two-Step Supervised Trajectory -->
+    <td>Two-Step Supervised Trajectory</td>
+    <td>$
+      l \left(
+        f(u^{[0]}),
+        \mathcal{P}(u^{[0]})
+      \right)
+      +
+      l \left(
+        f^2(u^{[0]}),
+        \mathcal{P}^2(u^{[0]})
+      \right)
+    $</td>
+    <td>$
+      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\big|_{u^{[0]}}
+      +
+      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[2]}}
+      \frac{\partial f}{\partial u}\big|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\big|_{u^{[0]}}
+    $</td>
+    <td>$
+      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[1]}}
+      \frac{\partial f}{\partial \theta}\big|_{u^{[0]}}
+      +
+      \frac{\partial l}{\partial \hat{u}}\big|_{u^{[2]}}
+      \left(
+        \frac{\partial f}{\partial \theta}\big|_{u^{[1]}}
+        +
+        \frac{\partial f}{\partial u}\big|_{u^{[1]}}
+        \frac{\partial f}{\partial \theta}\big|_{u^{[0]}}
+      \right)
+    $</td>
+  </tr>
   </tbody>
 </table> 
 
