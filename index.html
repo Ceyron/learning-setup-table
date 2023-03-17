@@ -227,12 +227,12 @@ MathJax = {
       \right)
     $$</td>
     <td>$$
-      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{\mathcal{P}(u^{[1]})}
       \frac{\partial \mathcal{P}}{\partial u}\bigg|_{u^{[1]}}
       \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
     $$</td>
     <td>$$
-      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{\mathcal{P}(u^{[1]})}
       \frac{\partial \mathcal{P}}{\partial \theta}\bigg|_{u^{[1]}}
       \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
     $$</td>
@@ -253,7 +253,7 @@ MathJax = {
       \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
       \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
       +
-      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{\mathcal{P}(u^{[1]})}
       \frac{\partial \mathcal{P}}{\partial u}\bigg|_{u^{[1]}}
       \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
     $$</td>
@@ -261,7 +261,7 @@ MathJax = {
       \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
       \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
       +
-      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{\mathcal{P}(u^{[1]})}
       \frac{\partial \mathcal{P}}{\partial \theta}\bigg|_{u^{[1]}}
       \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
     $$</td>
@@ -276,20 +276,46 @@ MathJax = {
       \right)
     $$</td>
     <td>$$
-      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[t_P +1]}}
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{\mathcal{P}^{t_P}(u^{[1]})}
       \left(
         \prod_{p=t_P}^{1}
-        \frac{\partial \mathcal{P}}{\partial u}\bigg|_{u^{[p-1]}}
+        \frac{\partial \mathcal{P}}{\partial u}\bigg|_{\mathcal{P}^{p-1}(u^{[1]})}
       \right)
       \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
     $$</td>
     <td>$$
-      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[t_P +1]}}
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{\mathcal{P}^{t_P}(u^{[1]})}
       \left(
         \prod_{p=t_P}^{1}
-        \frac{\partial \mathcal{P}}{\partial \theta}\bigg|_{u^{[p-1]}}
+        \frac{\partial \mathcal{P}}{\partial \theta}\bigg|_{\mathcal{P}^{p-1}(u^{[1]})}
       \right)
       \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
+    $$</td>
+  </tr>
+  <tr>
+    <!-- Multi Network - One Physics - Final -->
+    <td class="align-middle">Multi Network - One Physics - Final</td>
+    <td>$$
+      l \left(
+        \mathcal{P}(f^{t_N}(u^{[0]})),
+        \mathcal{P}^{t_N + 1}(u^{[0]})
+      \right)
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{\mathcal{P}(u^{[t_N]})}
+      \left(
+        \prod_{p=t_N}^{0}
+        \frac{\partial f}{\partial u}\bigg|_{u^{[p]}}
+      \right)
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{\mathcal{P}(u^{[t_N]})}
+      \sum_{s=t_N}^{0}
+      \left(
+        \prod_{p=t_N}^{s}
+        \frac{\partial f}{\partial u}\bigg|_{u^{[p]}}
+      \right)
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[s]}}
     $$</td>
   </tr>
   <tr>
