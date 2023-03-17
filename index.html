@@ -211,6 +211,67 @@ MathJax = {
       \frac{\partial f}{\partial \theta}\bigg|_{u^{[1]}}
     $$</td>
   </tr>
+  <tr>
+    <td><b>Mix-Chain Differentiable Physics</a> </b></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <!-- One Network - One Physics -->
+    <td class="align-middle">One Network - One Physics - Final</td>
+    <td>$$
+      l \left(
+        \mathcal{P}(f(u^{[0]})),
+        \mathcal{P}^2(u^{[0]})
+      \right)
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial \mathcal{P}}{\partial u}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial \mathcal{P}}{\partial \theta}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
+    $$</td>
+  </tr>
+  <tr>
+    <!-- One Network - One Physics Trajectory -->
+    <td class="align-middle">One Network - One Physics - Trajectory</td>
+    <td>$$
+      l\left(
+        f(u^{[0]}), \mathcal{P}(u^{[0]})
+      \right)
+      +
+      l\left(
+        \mathcal{P}(f(u^{[0]})), \mathcal{P}^2(u^{[0]})
+      \right)
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+      +
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial \mathcal{P}}{\partial u}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
+      +
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[2]}}
+      \frac{\partial \mathcal{P}}{\partial \theta}\bigg|_{u^{[1]}}
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
+    $$</td>
+  </tr>
+  <tr>
+    <td><b>Diverted-Chain Differentiable Physics</a> </b></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
   </tbody>
 </table> 
 
