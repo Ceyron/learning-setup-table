@@ -267,6 +267,32 @@ MathJax = {
     $$</td>
   </tr>
   <tr>
+    <!-- One Network - Multi-Step Physics Final -->
+    <td class="align-middle">One Network - Multi Physics - Final</td>
+    <td>$$
+      l \left(
+        \mathcal{P}^{t_P}(f(u^{[0]})),
+        \mathcal{P}^{t_P +1}(u^{[0]})
+      \right)
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[t_P +1]}}
+      \left(
+        \prod_{p=t_P}^{1}
+        \frac{\partial \mathcal{P}}{\partial u}\bigg|_{u^{[p-1]}}
+      \right)
+      \frac{\partial f}{\partial u}\bigg|_{u^{[0]}}
+    $$</td>
+    <td>$$
+      \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[t_P +1]}}
+      \left(
+        \prod_{p=t_P}^{1}
+        \frac{\partial \mathcal{P}}{\partial \theta}\bigg|_{u^{[p-1]}}
+      \right)
+      \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
+    $$</td>
+  </tr>
+  <tr>
     <td><b>Diverted-Chain Differentiable Physics</a> </b></td>
     <td></td>
     <td></td>
