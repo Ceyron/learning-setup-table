@@ -408,6 +408,55 @@ MathJax = {
       \frac{\partial f}{\partial \theta}\bigg|_{u^{[0]}}
     $$</td>
   </tr>
+  <tr>
+    <!-- Multi Main Chain - One Diversion -->
+    <td class="align-middle">Multi Main Chain - One Diversion</td>
+    <td>$$
+      \sum_{s=0}^{t_M}
+      l \left(
+        f^{s+1}(u^{[0]}),
+        \mathcal{P}(f^{s}(u^{[0]}))
+      \right)
+    $$</td>
+    <td>$$
+      \sum_{s=t_M}^{0}
+      \left[
+        \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[s+1]}}
+        \left(
+          \prod_{p=s}^{0}
+          \frac{\partial f}{\partial u}\bigg|_{u^{[p]}}
+        \right)
+        +
+        \frac{\partial l}{\partial u}\bigg|_{\mathcal{P}(u^{[s]})}
+        \frac{\partial \mathcal{P}}{\partial u}\bigg|_{u^{[s]}}
+        \left(
+          \prod_{p=s-1}^{0}
+          \frac{\partial f}{\partial u}\bigg|_{u^{[p]}}
+        \right)
+      \right]
+    $$</td>
+    <td>$$
+      \sum_{s=t_M}^{0}
+      \left[
+        \frac{\partial l}{\partial \hat{u}}\bigg|_{u^{[s+1]}}
+        \sum_{r=s}^1
+        \left(
+          \prod_{p=s}^{r}
+          \frac{\partial f}{\partial \theta}\bigg|_{u^{[p]}}
+        \right)
+        \frac{\partial f}{\partial \theta}\bigg|_{u^{[r]}}
+        +
+        \frac{\partial l}{\partial u}\bigg|_{\mathcal{P}(u^{[s]})}
+        \frac{\partial \mathcal{P}}{\partial u}\bigg|_{u^{[s]}}
+        \sum_{r=s-1}^1
+        \left(
+          \prod_{p=s}^{r}
+          \frac{\partial f}{\partial \theta}\bigg|_{u^{[p]}}
+        \right)
+        \frac{\partial f}{\partial \theta}\bigg|_{u^{[r]}}
+      \right]
+    $$</td>
+  </tr>
   </tbody>
 </table> 
 
